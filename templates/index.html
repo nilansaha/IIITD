@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DASHBOARD</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+
+<style>
+.navbar {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #182437;
+    color: #BA3B39;
+    font-weight: bold;
+}
+
+.navbar-header {
+  padding-left: 20px;
+}
+
+</style>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="align:left">DASHBOARD</span></a>
+      </div>
+    </div>
+  </nav>
+
+<div class="fluid-container text-center" style="margin-top:40px;margin-left:40px;margin-right:40px;">
+  <div class="row">
+    <div class="col-sm-6">
+      TOP HASHTAGS
+      {{ hashtags|safe }}
+    </div>
+    <div class="col-sm-6">
+      ORIGINAL vs RETWEETS
+      {{ retweets|safe }}
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        TOP POSTERS
+        {{ users|safe }}
+      </div>
+      <div class="col-sm-6">
+        <p>SENTIMENT ANALYSIS</p>
+        {{ sentiment|safe }}
+      </div>
+  </div>
+  <br><br>
+</div>
+</body>
+</html>
